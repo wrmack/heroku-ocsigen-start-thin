@@ -77,10 +77,6 @@ RUN adduser --uid 1000 --disabled-password --gecos '' opam  \
     && passwd -l opam \
     && chown -R opam:opam /home/opam 
 
-# Initialise opam and install ocaml and ocsigen, answering all prompts with yes
-# Disable sandboxing per https://github.com/ocaml/opam/issues/3498, https://github.com/ocaml/opam/issues/3424 
-# Write opam env to bashrc
-# If need to reinitialise opam, use --reinit as in: RUN opam init --disable-sandboxing --reinit -y
 USER opam
 ENV PATH='/home/opam/.opam/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 ENV CAML_LD_LIBRARY_PATH='/home/opam/.opam/default/lib/stublibs:/home/opam/.opam/default/lib/ocaml/stublibs:/home/opam/.opam/default/lib/ocaml:/home/opam/.opam/default/lib/ocaml/threads'
