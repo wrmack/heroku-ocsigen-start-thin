@@ -56,4 +56,4 @@ docker run -it -d --name *your-container-name* -p 8080:8080 *your-image-name*
 - view on localhost:8080
 
 
-Live site [here](https://ocsi-thin-test.herokuapp.com).  I am using the free tier but with this thin version it only takes about 10 seconds for a sleeping dyno to load the page
+Live site [here](https://eliom-test.herokuapp.com).  I am using the free tier but with this thin version it only takes about 10 seconds for a sleeping dyno to load the page
